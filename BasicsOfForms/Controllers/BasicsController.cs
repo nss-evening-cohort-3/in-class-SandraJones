@@ -19,8 +19,10 @@ namespace BasicsOfForms.Controllers
             int i = 0;
             return View();
         }
+        [HttpPost]
         public ActionResult Razor(FormCollection form)
         {
+            int j = 0;
             return View();
         }
     }

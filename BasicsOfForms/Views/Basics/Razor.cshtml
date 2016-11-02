@@ -3,5 +3,10 @@
     ViewBag.Title = "Razor";
 }
 
-<h2>Razor</h2>
-
+<h1>RazorBasics</h1>
+<ul>
+    @{  foreach (var Basic in ViewBag.Basics)
+        {
+            <li>@Basic.email @Basic.password @Basic.passwordConfirmation</li>
+        }
+</ul>
