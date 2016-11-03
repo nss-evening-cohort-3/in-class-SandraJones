@@ -8,10 +8,18 @@ using System.Web.Mvc;
 
 namespace BasicsOfForms.Controllers
 {
-    public class BasicsController : ApiController
+    public class BasicsController : Controller
     {
+        //GET
         public ActionResult Index()
         {
+            int i = 0;
+            return View();
+        }
+       
+        public ActionResult Razor()
+        {
+            int j = 0;
             return View();
         }
     }
