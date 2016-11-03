@@ -3,10 +3,21 @@
     ViewBag.Title = "Razor";
 }
 
-<h1>RazorBasics</h1>
-<ul>
-    @{  foreach (var Basic in ViewBag.Basics)
-        {
-            <li>@Basic.email @Basic.password @Basic.passwordConfirmation</li>
-        }
-</ul>
+
+@using (Html.BeginForm("Razor", "Basics", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    //name of the form field
+    @Html.TextBox("email")
+    @Html.Password("password")
+    @Html.Password("passwordConfirmation")
+    <input type="submit" class="btn btn-default" value="SUBMIT!" />
+
+
+
+}
+
+
+
+
