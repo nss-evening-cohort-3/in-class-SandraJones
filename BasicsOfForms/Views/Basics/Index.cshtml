@@ -5,9 +5,13 @@
 
 <h2>Index</h2>
 <div>
-    @Html.AntiForgeryToken()
-    <input type="email" name="email" />
-    <input type="password" name="password" />
-    <input type="password" name="passwordConfirmation" />
-    <button type="submit" name="submit" >SUBMIT!</button>
+
+    <form method="POST" action="/Basics/Index">
+        @Html.AntiForgeryToken()
+        <input type="email" name="email" />
+        <input type="password" name="password" />
+        <input type="password" name="passwordConfirmation" />
+        <button type="submit" name="submit">SUBMIT!</button>
+    </form>
+
 </div>
